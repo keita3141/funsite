@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ストリートファイター6 | 最新格闘ゲームの魅力を体感せよ</title>
+    <title>小松高校 北海道修学旅行 3泊4日の旅</title>
     <style>
         /* 全体のリセットと基本設定 */
         * {
@@ -12,231 +12,280 @@
             box-sizing: border-box;
         }
         body {
-            font-family: 'Impact', 'Arial Black', 'Hiragino Kaku Gothic ProN', 'Helvetica Neue', sans-serif;
-            background-color: #0a0a0c;
-            color: #ffffff;
-            line-height: 1.7;
-            overflow-x: hidden;
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            color: #333;
+            background-color: #e8f4f8; /* 柔らかな空色ベースの背景 */
+            line-height: 1.8;
         }
-        
-        /* 共通コンテナ */
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 20px;
+        a {
+            text-decoration: none;
         }
 
-        /* ヒーローセクション（メインビジュアル風） */
-        .hero {
-            background: linear-gradient(135deg, #141519 0%, #0b0c10 100%);
-            position: relative;
-            padding: 120px 0 80px 0;
+        /* ヘッダー・メインビジュアル */
+        header {
+            background: linear-gradient(rgba(0, 162, 232, 0.6), rgba(135, 206, 250, 0.7)), 
+                        url('https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+            color: #fff;
             text-align: center;
-            border-bottom: 4px solid #ff0055;
+            padding: 120px 20px;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
         }
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: radial-gradient(circle, rgba(0,210,255,0.1) 0%, transparent 70%);
-            pointer-events: none;
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
         }
-        .hero-tag {
-            font-size: 1.2rem;
-            color: #00d2ff;
-            text-transform: uppercase;
-            letter-spacing: 4px;
-            margin-bottom: 10px;
-            font-weight: bold;
-        }
-        .hero h1 {
-            font-size: 4rem;
-            font-weight: 900;
-            line-height: 1.1;
-            margin-bottom: 20px;
-            letter-spacing: -1px;
-            text-shadow: 0 0 20px rgba(255, 0, 85, 0.6);
-            background: linear-gradient(to right, #ffffff, #ff0055);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .hero-sub {
+        header p {
             font-size: 1.4rem;
-            color: #cccccc;
-            margin-bottom: 40px;
-        }
-        
-        /* プラットフォームバッジ */
-        .platform-box {
-            display: inline-flex;
-            gap: 15px;
-            background: rgba(255,255,255,0.05);
-            padding: 10px 30px;
-            border-radius: 50px;
-            border: 1px solid rgba(255,255,255,0.1);
-        }
-        .badge {
-            font-size: 1.1rem;
             font-weight: bold;
-            color: #00d2ff;
+            background: rgba(255, 255, 255, 0.2);
+            display: inline-block;
+            padding: 5px 20px;
+            border-radius: 20px;
         }
 
-        /* 特徴セクション */
-        .features {
-            padding: 100px 0;
+        /* コンテナ */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
+
+        /* セクション共通 */
+        section {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 8px 20px rgba(173, 216, 230, 0.3);
         }
         .section-title {
             text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 60px;
+            font-size: 2rem;
+            color: #007bb6;
+            margin-bottom: 30px;
             position: relative;
-            letter-spacing: 2px;
         }
         .section-title::after {
-            content: '';
+            content: '✈';
             display: block;
-            width: 60px;
-            height: 4px;
-            background: #00d2ff;
-            margin: 15px auto 0 auto;
+            font-size: 1.2rem;
+            color: #87cefa;
+            margin-top: 5px;
         }
-        
-        /* グリッドレイアウト */
+
+        /* タイムライン（スケジュール） */
+        .timeline {
+            position: relative;
+            margin-top: 20px;
+        }
+        .day-box {
+            margin-bottom: 35px;
+            border-left: 4px solid #87cefa;
+            padding-left: 20px;
+            position: relative;
+        }
+        .day-box::before {
+            content: '';
+            position: absolute;
+            left: -10px;
+            top: 5px;
+            width: 16px;
+            height: 16px;
+            background: #00a2e8;
+            border-radius: 50%;
+        }
+        .day-title {
+            font-size: 1.4rem;
+            color: #005b88;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .day-content {
+            font-size: 1.05rem;
+        }
+        .highlight-text {
+            color: #ff6b6b;
+            font-weight: bold;
+        }
+
+        /* 2カラムレイアウト（イベント・グルメなど） */
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
         }
         .card {
-            background: #111216;
-            border: 1px solid #22252a;
+            background: #f4f9fc;
             border-radius: 12px;
-            padding: 40px 30px;
-            transition: all 0.3s ease;
-            position: relative;
             overflow: hidden;
+            border: 1px solid #d0e7f5;
+            transition: transform 0.3s;
         }
         .card:hover {
             transform: translateY(-5px);
-            border-color: #00d2ff;
-            box-shadow: 0 10px 25px rgba(0, 210, 255, 0.15);
         }
-        .card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; width: 4px; height: 100%;
-            background: #00d2ff;
+        .card-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
         }
-        .card.alt::before {
-            background: #ff0055;
+        .card-body {
+            padding: 20px;
         }
-        .card h3 {
-            font-size: 1.6rem;
-            margin-bottom: 15px;
-            color: #ffffff;
-        }
-        .card p {
-            color: #a0a5b5;
-            font-size: 1rem;
+        .card-title {
+            font-size: 1.2rem;
+            color: #007bb6;
+            margin-bottom: 10px;
+            font-weight: bold;
         }
 
-        /* 特大ハイライトセクション */
-        .highlight-section {
-            background: linear-gradient(180deg, #111216 0%, #0a0a0c 100%);
-            padding: 100px 0;
-            border-top: 1px solid #22252a;
-        }
-        .highlight-box {
-            background: linear-gradient(135deg, #ff0055 0%, #990033 100%);
-            border-radius: 16px;
-            padding: 50px;
+        /* アピールポイントバナー */
+        .banner {
+            background: linear-gradient(135deg, #00a2e8, #87cefa);
+            color: white;
             text-align: center;
-            box-shadow: 0 15px 40px rgba(255, 0, 85, 0.3);
+            padding: 40px 20px;
+            border-radius: 16px;
+            margin-bottom: 40px;
         }
-        .highlight-box h2 {
-            font-size: 3rem;
-            font-weight: 900;
-            margin-bottom: 15px;
-            color: #fff;
-            letter-spacing: 1px;
+        .banner h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
         }
-        .highlight-box p {
-            font-size: 1.3rem;
-            color: #ffe6ee;
-            font-weight: bold;
+        .banner p {
+            font-size: 1.2rem;
         }
 
         /* フッター */
         footer {
-            background: #050507;
-            padding: 40px 20px;
+            background-color: #005b88;
+            color: #fff;
             text-align: center;
-            color: #555964;
-            font-size: 0.9rem;
-            border-top: 1px solid #111216;
+            padding: 30px 20px;
+            margin-top: 60px;
+            font-size: 0.95rem;
         }
 
-        /* レスポンシブ */
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.8rem; }
-            .hero-sub { font-size: 1.1rem; }
-            .section-title { font-size: 2rem; }
-            .highlight-box { padding: 30px 20px; }
-            .highlight-box h2 { font-size: 2rem; }
-            .highlight-box p { font-size: 1rem; }
+        /* レスポンシブ対応 */
+        @media (max-width: 600px) {
+            header h1 { font-size: 2rem; }
+            header p { font-size: 1.1rem; }
+            section { padding: 25px 15px; }
+            .section-title { font-size: 1.6rem; }
         }
     </style>
 </head>
 <body>
 
-    <section class="hero">
-        <div class="container">
-            <p class="hero-tag">格闘ゲームの最新作</p>
-            <h1>ストリートファイター6</h1>
-            <p class="hero-sub">新たな時代へ突き進む、最高峰の対戦格闘体験</p>
-            
-            <div class="platform-box">
-                <span class="badge">PS5</span>
-                <span style="color: #444;">|</span>
-                <span class="badge">Switch2</span>
-            </div>
-        </div>
-    </section>
+    <header>
+        <h1>北海道 修学旅行</h1>
+        <p>小松高校 理数科・普通科 3泊4日の青春の旅</p>
+    </header>
 
-    <section class="features">
-        <div class="container">
-            <h2 class="section-title">GAME FEATURES</h2>
-            
+    <div class="container">
+
+        <div class="banner">
+            <h2>小松空港から直行便で北の大地へ！</h2>
+            <p>大自然、最高のエンタメ、極上のグルメを遊び尽くす特別な4日間</p>
+        </div>
+
+        <section id="schedule">
+            <h2 class="section-title">Trip Schedule</h2>
+            <div class="timeline">
+                
+                <div class="day-box">
+                    <div class="day-title">1日目：アイヌ文化に触れ、熱狂の夜へ</div>
+                    <div class="day-content">
+                        小松空港から飛行機で北海道へ直行！まずは「ウポポイ」でアイヌ文化を深く学ぶ研修。
+                        夜は一大イベントの<span class="highlight-text">エスコンフィールドHOKKAIDOでプロ野球観戦！</span>最高のスタジアム熱気を体感。
+                    </div>
+                </div>
+
+                <div class="day-box">
+                    <div class="day-title">2日目：小樽・札幌 自由研修</div>
+                    <div class="day-content">
+                        お楽しみの都市自由研修！歴史ある小樽の街並みや、札幌の都市をグループで散策。
+                        ロマンチックな「白い恋人パーク」や、話題の都市型水族館「AOAO SAPPORO」などが大人気スポットです！
+                    </div>
+                </div>
+
+                <div class="day-box">
+                    <div class="day-title">3日目：大自然アクティビティ</div>
+                    <div class="day-content">
+                        前半はクラス別行動！「馬乗り体験」や「遊覧船クルーズ」など、それぞれのコースを満喫。
+                        後半は全員合流して、大迫力の<span class="highlight-text">ラフティング体験！</span>北海道の激流をみんなで乗り越える大興奮の一大イベントです。
+                    </div>
+                </div>
+
+                <div class="day-box">
+                    <div class="day-title">4日目：思い出とお土産を胸に帰路へ</div>
+                    <div class="day-content">
+                        最終日は新千歳空港へ。広大な空港内でお土産選びを徹底的に楽しんだあと、飛行機で小松へと帰宅します。
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="events">
+            <h2 class="section-title">2大ビッグイベント＆ホテル</h2>
             <div class="grid">
-                <div class="card">
-                    <h3>究極のバトルシステム</h3>
-                    <p>緻密なコンボや熱い駆け引きなど、プレイヤーの閃きと技術が交錯する様々な面白さが詰まっています。</p>
-                </div>
-                
-                <div class="card alt">
-                    <h3>多彩なキャラクター</h3>
-                    <p>個性に溢れるキャラクターバラエティに加え、世界をさらに広げる魅力的なDLCも続々と登場。</p>
-                </div>
                 
                 <div class="card">
-                    <h3>熱狂のランクバトル</h3>
-                    <p>世界中のライバルたちと競い合い、自らの実力を証明するランクバトルこそが本作の醍醐味です。</p>
+                    <img class="card-img" src="https://images.unsplash.com/photo-1562074244-a429045a83b5?auto=format&fit=crop&w=500&q=80" alt="野球場イメージ">
+                    <div class="card-body">
+                        <div class="card-title">エスコンフィールド観戦</div>
+                        <p>日本最先端の球場で野球を観戦！圧倒的なスケール感と開放的な空間で、最高に盛り上がる夜を過ごします。</p>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <section class="highlight-section">
-        <div class="container">
-            <div class="highlight-box">
-                <h2>賞金 1,000億円の大会も開催！</h2>
-                <p>破格のスケールで繰り広げられる、世界最高峰の戦いに挑戦せよ。</p>
+                <div class="card">
+                    <img class="card-img" src="https://images.unsplash.com/photo-1530866495561-507c9faab2ed?auto=format&fit=crop&w=500&q=80" alt="ラフティングイメージ">
+                    <div class="card-body">
+                        <div class="card-title">爽快！ラフティング体験</div>
+                        <p>みんなでパドルを漕いで激流を下る！水しぶきを浴びながら、クラスの絆が一気に深まるスリル満点のアクティビティ。</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img class="card-img" src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=500&q=80" alt="ホテルイメージ">
+                    <div class="card-body">
+                        <div class="card-title">とても素敵な極上ホテル</div>
+                        <p>旅の疲れを癒やすのは、広々とした綺麗でとてもいいホテル。友達と同じ部屋で過ごす夜のひとときも一生の思い出に。</p>
+                    </div>
+                </div>
+
             </div>
-        </div>
-    </section>
+        </section>
+
+        <section id="gourmet">
+            <h2 class="section-title">豊富な食＆定番お土産</h2>
+            <div class="grid">
+                
+                <div class="card">
+                    <img class="card-img" src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=500&q=80" alt="ラーメンイメージ">
+                    <div class="card-body">
+                        <div class="card-title">魅惑の北海道グルメ</div>
+                        <p>本場の札幌ラーメン、新鮮な海の幸が贅沢にのった海鮮丼、ジューシーで香ばしいジンギスカンなど、美味しい食の宝庫を堪能！</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img class="card-img" src="https://images.unsplash.com/photo-1608198399988-341f712c3711?auto=format&fit=crop&w=500&q=80" alt="スイーツイメージ">
+                    <div class="card-body">
+                        <div class="card-title">定番＆絶品のお土産</div>
+                        <p>新千歳空港などで買える定番の「白い恋人」や、濃厚でとろける美味しさの「チーズケーキ」など、家族や自分へのお土産選びもばっちり！</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </div>
 
     <footer>
-        <p>&copy; 2026 STREET FIGHTER 6 LP Fan Page. All rights reserved.</p>
+        <p>&copy; 2026 小松高校 北海道修学旅行 特設ページ</p>
     </footer>
 
 </body>
